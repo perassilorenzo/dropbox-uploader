@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("fileDropbox")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99a0cabbccb1036d6ba7bf4fbd9d6899a63e1531")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1efc0ad2f6dbc180767f9c8253a1100287d5dbcd")]
 [assembly: System.Reflection.AssemblyProductAttribute("fileDropbox")]
 [assembly: System.Reflection.AssemblyTitleAttribute("fileDropbox")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
