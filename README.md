@@ -34,7 +34,7 @@ Applicazione Windows sviluppata in C# che permette di copiare rapidamente file t
 
 ## Video dimostrativo
 
-[▶ Guarda il video demo](demo.mp4)
+[▶ Guarda il video demo](https://github.com/user-attachments/assets/bf127263-e43a-489d-9c85-4e9430effd0f)
 
 ---
 
