@@ -34,7 +34,7 @@ Applicazione Windows sviluppata in C# che permette di copiare rapidamente file t
 
 ## Video dimostrativo
 
-<video src="demo.mp4" controls width="600"></video>
+![Demo di FileCopier](demo.gif)
 
 ---
 
@@ -45,7 +45,7 @@ dropbox-uploader/
 ├── Program.cs              # Entry point
 ├── FileCopier.cs           # Classe principale con logica di copia
 ├── FileCopier.csproj       # Configurazione del progetto
-├── demo.mp4                # Video dimostrativo
+├── demo.gif                 # Video dimostrativo
 ├── .github/
 │   └── workflows/
 │       └── dotnet-desktop.yml  # GitHub Actions CI
