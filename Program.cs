@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Windows.Forms;
 
-namespace fileDropbox
+namespace FileCopier
 {
     internal class Program
     {
         [STAThread]
         static void Main()
         {
-            fileDropbox applicativo = new fileDropbox();
+            Copier applicativo = new Copier();
             applicativo.Run();
         }
     }
