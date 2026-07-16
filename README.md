@@ -45,7 +45,6 @@ dropbox-uploader/
 ├── Program.cs              # Entry point
 ├── FileCopier.cs           # Classe principale con logica di copia
 ├── FileCopier.csproj       # Configurazione del progetto
-├── demo.mp4                 # Video dimostrativo
 ├── .github/
 │   └── workflows/
 │       └── dotnet-desktop.yml  # GitHub Actions CI
