@@ -11,7 +11,7 @@ Semplice strumento Windows per copiare un file da un percorso a un altro, tramit
 
 ## Video dimostrativo
 
-<video src="demo.mp4" controls width="600"></video>
+[▶ Guarda il video demo](demo.mp4)
 
 ## Requisiti
 
