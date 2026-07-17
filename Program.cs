@@ -12,14 +12,14 @@ namespace FileCopier
             {
                 Console.Clear();
                 Console.WriteLine("=== File Uploader ===");
-                Console.WriteLine("1. Copia locale");
-                Console.WriteLine("2. Upload Cloud (Dropbox)");
-                Console.WriteLine("3. Cambia token");
-                Console.WriteLine("4. Esci");
-                Console.Write("Scelta: ");
-                string scelta = Console.ReadLine() ?? "";
+                Console.WriteLine("1. Local copy");
+                Console.WriteLine("2. Cloud upload (Dropbox)");
+                Console.WriteLine("3. Change token");
+                Console.WriteLine("4. Exit");
+                Console.Write("Choice: ");
+                string choice = Console.ReadLine() ?? "";
 
-                switch (scelta)
+                switch (choice)
                 {
                     case "1":
                         new Copier().Run();
@@ -28,10 +28,10 @@ namespace FileCopier
                         new Uploader().Run();
                         break;
                     case "3":
-                        Console.Write("Nuovo token Dropbox: ");
+                        Console.Write("New Dropbox token: ");
                         string t = (Console.ReadLine() ?? "").Trim();
                         File.WriteAllText("token.txt", t);
-                        Console.WriteLine("Token salvato.");
+                        Console.WriteLine("Token saved.");
                         break;
                     case "4":
                         return;

@@ -12,10 +12,10 @@ namespace FileCopier
         {
             try
             {
-                string token = CaricaToken();
+                string token = LoadToken();
                 if (string.IsNullOrEmpty(token))
                 {
-                    Console.Write("Token Dropbox: ");
+                    Console.Write("Dropbox token: ");
                     token = (Console.ReadLine() ?? "").Trim();
                     File.WriteAllText("token.txt", token);
                 }
@@ -32,16 +32,16 @@ namespace FileCopier
                     body: stream
                 ).GetAwaiter().GetResult();
 
-                Console.WriteLine($"Caricato: {uploaded.PathDisplay}");
+                Console.WriteLine($"Uploaded: {uploaded.PathDisplay}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Errore: {ex.Message}");
+                Console.WriteLine($"Error: {ex.Message}");
             }
             Console.ReadKey();
         }
 
-        string CaricaToken()
+        string LoadToken()
         {
             if (File.Exists("token.txt"))
             {

@@ -15,30 +15,29 @@ namespace FileCopier
 
                 if (fileDialog.ShowDialog() != DialogResult.OK || folderDialog.ShowDialog() != DialogResult.OK) return;
 
-                string fileOrigine = fileDialog.FileName;
-                string cartellaDestinazione = folderDialog.SelectedPath;
+                string src = fileDialog.FileName;
+                string dstFolder = folderDialog.SelectedPath;
+                string dst = Path.Combine(dstFolder, Path.GetFileName(src));
 
-                string destinazione = Path.Combine(cartellaDestinazione, Path.GetFileName(fileOrigine));
+                File.Copy(src, dst, true);
 
-                File.Copy(fileOrigine, destinazione, true);
-
-                Console.WriteLine($"File copiato correttamente: {destinazione}");
+                Console.WriteLine($"File copied: {dst}");
             }
             catch (UnauthorizedAccessException)
             {
-                Console.WriteLine("Permesso negato: non puoi scrivere in quella cartella.");
+                Console.WriteLine("Access denied: cannot write to that folder.");
             }
             catch (IOException ex) when ((ex.HResult & 0xFFFF) == 32)
             {
-                Console.WriteLine("Il file è aperto da un altro programma. Chiudilo e riprova.");
+                Console.WriteLine("File is open by another program. Close it and try again.");
             }
             catch (IOException ex)
             {
-                Console.WriteLine($"Errore di I/O: {ex.Message}");
+                Console.WriteLine($"I/O error: {ex.Message}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Errore imprevisto: {ex.Message}");
+                Console.WriteLine($"Unexpected error: {ex.Message}");
             }
             Console.ReadKey();
         }
