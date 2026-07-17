@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 namespace FileCopier
 {
@@ -16,7 +17,7 @@ namespace FileCopier
                 Console.WriteLine("3. Cambia token");
                 Console.WriteLine("4. Esci");
                 Console.Write("Scelta: ");
-                string scelta = Console.ReadLine();
+                string scelta = Console.ReadLine() ?? "";
 
                 switch (scelta)
                 {
@@ -28,10 +29,9 @@ namespace FileCopier
                         break;
                     case "3":
                         Console.Write("Nuovo token Dropbox: ");
-                        string t = Console.ReadLine().Trim();
+                        string t = (Console.ReadLine() ?? "").Trim();
                         File.WriteAllText("token.txt", t);
-                        Console.WriteLine("Token salvato. Premi un tasto...");
-                        Console.ReadKey();
+                        Console.WriteLine("Token salvato.");
                         break;
                     case "4":
                         return;

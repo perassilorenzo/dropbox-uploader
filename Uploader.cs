@@ -15,9 +15,9 @@ namespace FileCopier
                 string token = CaricaToken();
                 if (string.IsNullOrEmpty(token))
                 {
-                    Console.WriteLine("Token non presente. Usa il menu per inserirlo.");
-                    Console.ReadKey();
-                    return;
+                    Console.Write("Token Dropbox: ");
+                    token = (Console.ReadLine() ?? "").Trim();
+                    File.WriteAllText("token.txt", token);
                 }
 
                 OpenFileDialog dialog = new OpenFileDialog();
@@ -48,7 +48,7 @@ namespace FileCopier
                 string val = File.ReadAllText("token.txt").Trim();
                 if (val.Length > 0) return val;
             }
-            return null;
+            return "";
         }
     }
 }
