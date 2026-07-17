@@ -34,9 +34,9 @@ Applicazione Windows in C# per copiare file in locale o caricarli su Dropbox, co
 
 ---
 
-## Video dimostrativo
+## Video dimostrativo (solo copia locale)
 
-[▶ Video demo della copia locale](https://github.com/user-attachments/assets/bf127263-e43a-489d-9c85-4e9430effd0f)
+[▶ Guarda il video](https://github.com/user-attachments/assets/bf127263-e43a-489d-9c85-4e9430effd0f)
 
 ---
 
